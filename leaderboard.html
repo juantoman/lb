@@ -3,6 +3,7 @@
 </head>
 <body>
 	<h1>Leaderboard</h1>
+	{{> addPlayerForm}}
 	{{> leaderboard}}
 </body>
 
@@ -16,8 +17,18 @@
     		<li>
 			<button class="increment">Give 5 Points</button>
 			<button class="decrement">Take 5 Points</button>
+			<button class="remove">Remove Player</button>
 		</li>
 	    {{/if}}
 	</ul>
 </template>
+
+<template name="addPlayerForm">
+    <form>
+        <input type="text" name="playerName">
+        <input type="submit" value="Add Player">
+    </form>
+</template>
+
+
 
