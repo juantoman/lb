@@ -10,21 +10,21 @@
 <template name="leaderboard">
 	{{#if currentUser}}
     {{> addPlayerForm}}
-		<ul>
+		<ul class="list-group">
 		    {{#each player}}
-			<li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+			<li class="player {{selectedClass}} list-group-item">{{name}}: {{score}}</li>
 		    {{/each}}
 		    {{#if selectedPlayer}}
-	    		<li>Selected Player: {{selectedPlayer.name}}</li>
+	    		<li class="bg-info">Selected Player: {{selectedPlayer.name}}</li>
 	    		<li>
-				<button class="increment">Give 5 Points</button>
-				<button class="decrement">Take 5 Points</button>
-				<button class="remove">Remove Player</button>
+				<button class="increment btn btn-primary btn-sm">Give 5 Points</button>
+				<button class="decrement btn btn-primary btn-sm">Take 5 Points</button>
+				<button class="remove btn btn-primary btn-sm">Remove Player</button>
 			</li>
 		    {{/if}}
 		</ul>
 	{{else}}
-	    <p>You must be logged-in to see this content.</p>
+	    <p class="bg-info">You must be logged-in to see this content.</p>
 	{{/if}}
 </template>
 
